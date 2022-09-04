@@ -7,7 +7,7 @@ from urllib.parse import urlparse, unquote
 import requests
 from dotenv import load_dotenv
 
-from downoad_image import downoad_image
+from download_image import download_image
 
 def fetch_spacex_last_launch(folder, launch):
     url = f"https://api.spacexdata.com/v5/launches"

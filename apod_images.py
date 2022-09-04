@@ -1,13 +1,13 @@
+import datetime
 import os
 import os.path
 from pathlib import Path
 from urllib.parse import urlparse, unquote
 
 import requests
-import datetime
 from dotenv import load_dotenv
 
-from downoad_image import downoad_image
+from download_image import download_image
 
 def get_image_expansion(url):
     unquote_link = unquote(url)
@@ -44,7 +44,6 @@ def main():
     Path(folder).mkdir(parents=True, exist_ok=True)
     
     get_apod_image(api_key,folder)
-    get_epic_image(api_key, folder)
     
 if __name__ == "__main__":
     main()
