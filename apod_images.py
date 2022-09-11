@@ -20,9 +20,10 @@ def get_image_expansion(url):
 
 def get_apod_image(api_key, folder):
     url = "https://api.nasa.gov/planetary/apod"
+    photos_amount = 30
     params = {
         "api_key" : api_key,
-        "photos_amount" : 30
+        "count" : photos_amount
     }
     
     response = requests.get(url, params)
