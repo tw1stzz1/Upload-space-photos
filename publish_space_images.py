@@ -12,7 +12,9 @@ def publish_space_images(bot, chat_id, delay_time):
         while True:
             for name in files:
                 file_path = os.path.join(dir_path, name)
-                bot.send_photo(chat_id, photo=open(file_path, 'rb'))
+                with open(file_path, 'rb') as file:
+                    photo = file
+                bot.send_photo(chat_id, photo=photo)
                 time.sleep(delay_time)
     
     
