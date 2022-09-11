@@ -22,7 +22,7 @@ def get_apod_image(api_key, folder):
     url = "https://api.nasa.gov/planetary/apod"
     params = {
         "api_key" : api_key,
-        "count" : 30
+        "photos_amount" : 30
     }
     
     response = requests.get(url, params)
