@@ -17,7 +17,8 @@ def fetch_spacex_last_launch(folder, launch):
     image_links = response.json()[launch]["links"]["flickr"]["original"]
     
     for spaceX_launchs_numbers, image_url in enumerate(image_links):
-        file_path = f"{folder}/spacex_{spaceX_launchs_numbers}.jpg"
+        file_name = f"spacex_{spaceX_launchs_numbers}.jpg"
+        file_path = os.path.join(folder, file_name)
         download_image(image_url, file_path)
 
 

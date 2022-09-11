@@ -24,7 +24,8 @@ def get_epic_image(api_key, folder):
         data_epic_image = datetime.datetime.fromisoformat(data_epic_image)
         data_epic_image = data_epic_image.strftime("%Y/%m/%d")
         link = f"https://api.nasa.gov/EPIC/archive/natural/{data_epic_image}/png/{name_epic_image}.png?api_key={api_key}"
-        file_path = f"{folder}/{name_epic_image}.png"
+        file_name = f"{name_epic_image}.png"
+        file_path = os.path.join(folder, file_name)
         download_image(link, file_path)
         
         

@@ -29,12 +29,15 @@ def get_apod_image(api_key, folder):
     response = requests.get(url, params)
     response.raise_for_status()
     for number, apod_image in enumerate(response.json()):
-        if apod_image["url"]:
-            url = apod_image["url"]
-            expansion = get_image_expansion(url)
-            if expansion:
-                file_path = f"{folder}/apod_{number}{expansion}"
-                download_image(url, file_path)
+        if not apod_image["url"]:
+            continue
+        url = apod_image["url"]
+        expansion = get_image_expansion(url)
+        if not expansion:
+            continue
+        file_name = f"apod_{number}{expansion}"
+        file_path = os.path.join(folder, file_name)
+        download_image(url, file_path)
     
 
 def main():
