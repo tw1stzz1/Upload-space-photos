@@ -5,7 +5,6 @@ from pathlib import Path
 from urllib.parse import urlparse, unquote
 
 import requests
-from dotenv import load_dotenv
 
 from download_image import download_image
 
@@ -23,18 +22,15 @@ def fetch_spacex_last_launch(folder, launch):
 
 
 def main():
-    load_dotenv()
+
     parser = argparse.ArgumentParser(
     description=""
     )
     parser.add_argument("--launch", type=int, default=66)
     args = parser.parse_args()
     launch = args.launch
-    api_key = os.getenv("API_KEY")
     folder = "images"
-    
     Path(folder).mkdir(parents=True, exist_ok=True)
-    
     fetch_spacex_last_launch(folder, launch)
 
     
