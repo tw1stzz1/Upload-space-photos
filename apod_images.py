@@ -18,7 +18,7 @@ def get_image_expansion(url):
 
 
 
-def get_apod_image(api_key, folder):
+def get_apod_images(api_key, folder):
     url = "https://api.nasa.gov/planetary/apod"
     photos_amount = 30
     params = {
@@ -47,7 +47,7 @@ def main():
     
     Path(folder).mkdir(parents=True, exist_ok=True)
     
-    get_apod_image(api_key,folder)
+    get_apod_images(api_key,folder)
     
 if __name__ == "__main__":
     main()

@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 from download_image import download_image
         
-def get_epic_image(api_key, folder):
+def get_epic_images(api_key, folder):
     url = "https://api.nasa.gov/EPIC/api/natural/images"
     params = {
         "api_key" : api_key,
@@ -36,8 +36,7 @@ def main():
     
     Path(folder).mkdir(parents=True, exist_ok=True)
     
-    get_epic_image(api_key, folder)
+    get_epic_images(api_key, folder)
     
 if __name__ == "__main__":
     main()
-
