@@ -8,7 +8,7 @@ import requests
 
 from download_image import download_image
 
-def fetch_spacex_last_launch(folder, launch):
+def fetch_spacex_last_launch_images(folder, launch):
     url = f"https://api.spacexdata.com/v5/launches"
 
     response = requests.get(url)
@@ -31,7 +31,7 @@ def main():
     launch = args.launch
     folder = "images"
     Path(folder).mkdir(parents=True, exist_ok=True)
-    fetch_spacex_last_launch(folder, launch)
+    fetch_spacex_last_launch_images(folder, launch)
 
     
 if __name__ == "__main__":
