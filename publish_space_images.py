@@ -21,7 +21,7 @@ def publish_space_images(bot, chat_id, delay_time):
 def main():
     load_dotenv()
     delay_time = int(os.getenv("DELAY_TIME",default=14400))
-    token = os.getenv("TOKEN")
+    token = os.getenv("TELEGRAM_TOKEN")
     chat_id = os.getenv("CHAT_ID")
     bot = telegram.Bot(token=token)
     updates = bot.get_updates()
