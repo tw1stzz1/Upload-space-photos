@@ -16,7 +16,7 @@ pip install -r requirements.txt
 ```
 API_KEY="chyprECONFsgQIIATq0Yi5SeA5WLz4jZdDArU4So"
 TELEGRAM_TOKEN="958423683:AAEAtJ5Lde5YYfkjergber"
-CHAT_ID="@testing_my_tg_bots"
+TG_CHAT_ID="@testing_my_tg_bots"
 DELAY_TIME=14400
 ```
 
@@ -63,8 +63,8 @@ This saves us from having to fix environment variables manually and makes the co
 #### .env example:
 ```
 API_KEY="chyprECONFsgQIIATq0Yi5SeA5WLz4jZdDArU4So"
-TOKEN="958423683:AAEAtJ5Lde5YYfkjergber"
-CHAT_ID="@testing_my_tg_bots"
+TELEGRAM_TOKEN="958423683:AAEAtJ5Lde5YYfkjergber"
+TG_CHAT_ID="@testing_my_tg_bots"
 DELAY_TIME=14400
 ```
 
