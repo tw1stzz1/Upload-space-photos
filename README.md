@@ -15,7 +15,7 @@ pip install -r requirements.txt
 #### Пример .env файла:
 ```
 API_KEY="chyprECONFsgQIIATq0Yi5SeA5WLz4jZdDArU4So"
-TOKEN="958423683:AAEAtJ5Lde5YYfkjergber"
+TELEGRAM_TOKEN="958423683:AAEAtJ5Lde5YYfkjergber"
 CHAT_ID="@testing_my_tg_bots"
 DELAY_TIME=14400
 ```
