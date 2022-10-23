@@ -23,10 +23,11 @@ def fetch_spacex_last_launch_images(folder, launch):
 
 def main():
 
-    parser = argparse.ArgumentParser(
-    description=""
+    parser = argparse.ArgumentParser(description="Get images of SpaceX's latest launch")
+    parser.add_argument(
+        "--launch", type=int, default=66, 
+        help="Write what launch you need (the default is the last one)"
     )
-    parser.add_argument("--launch", type=int, default=66)
     args = parser.parse_args()
     launch = args.launch
     folder = "images"
