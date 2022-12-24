@@ -43,7 +43,7 @@ python publish_space_images.py
 
 ### Цель проекта
 
-Код написан в образовательных целях на онлайн-курсе для веб-разработчиков [dvmn.org](https://dvmn.org/).
+
 
 # Space Telegram
 
@@ -91,4 +91,4 @@ python publish_space_images.py
 
 ### Project Goals
 
-The code is written for educational purposes on online-course for web-developers [dvmn.org](https://dvmn.org/).
+
